@@ -360,6 +360,27 @@ body {
   color: #eeeeee;
 }
 
+.devsite-header-billboard {
+  padding: 40px 24px 20px;
+  position: relative;
+  text-align: center;
+  z-index: 8888;
+}
+
+.devsite-header-billboard h1 {
+  font: 400 44px/52px 'Oxygen',sans-serif;
+  letter-spacing: -.5px;
+  margin: 14px 0;
+  overflow: visible;
+  padding: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .devsite-header-billboard {
+    padding: 24px;
+  }
+}
+
 h1 {
   text-align: center;
   font-family: 'Luckiest Guy', sans-serif;

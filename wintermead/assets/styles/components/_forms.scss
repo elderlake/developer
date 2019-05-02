@@ -1,0 +1,14 @@
+input {
+  position: relative;
+  vertical-align: top;
+  border: 2px solid $colour-border;
+  background: transparent;
+  border-radius: 0.3rem;
+  outline: none;
+  padding: calc(0.3rem + 2px) calc(0.4rem + 2px) calc(0.4rem + 2px) calc(0.4rem + 2px);
+  font-size: 0.85rem;
+  transition: border $animation-speed ease-in-out;
+  color: $colour-primary;
+
+  // After doesn't work on self-closing elements.
+}

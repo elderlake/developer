@@ -1,0 +1,53 @@
+.label {
+  background: $colour-border;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  padding: 0.4rem 0.8rem;
+  vertical-align: baseline;
+
+  &.error {
+    color: $colour-error;
+  }
+
+  &.focus {
+    color: $colour-focus;
+  }
+
+  &.success {
+    color: $colour-success;
+  }
+
+  &.warning {
+    color: $colour-warning;
+  }
+
+  &.secondary {
+    background: none;
+    border: 1px solid $colour-border;
+
+    &.error {
+      border: 1px solid $colour-error;
+    }
+  
+    &.focus {
+      border: 1px solid $colour-focus;
+    }
+  
+    &.success {
+      border: 1px solid $colour-success;
+    }
+  
+    &.warning {
+      border: 1px solid $colour-warning;
+    }
+  }
+
+  &.tertiary {
+    background: none;
+    font-size: 0.85rem;
+    font-variant-caps: all-small-caps;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,99 @@
+.component {
+  @include ui-border;
+  display: inline-block;
+  overflow: hidden;
+  user-select: none;
+  padding: 2px;
+  transition: border $animation-speed ease-in-out;
+
+  .bookmark {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: calc(0.4rem + 2px);
+    top: calc(0.4rem + 2px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.75rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding-top: 0.195rem;
+    padding-right: 0.075rem;
+    text-align: center;
+    z-index: 10;
+    transition: opacity $animation-speed, background $animation-speed, border $animation-speed, color $animation-speed ease-in-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: $colour-accent;
+    }
+  }
+
+  &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+
+    .bookmark {
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+
+  .image {
+    width: 200px;
+    height: 130px;
+    line-height: 0;
+
+    img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 0.2rem;
+      transition: opacity $animation-speed ease-in-out;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  .details {
+    background: $colour-border;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    margin-top: 0.2rem;
+    color: $colour-primary;
+
+    .title a {
+      color: $colour-primary;
+      transition: color $animation-speed ease-in-out;
+
+      &:hover {
+        color: $colour-accent;
+      }
+    }
+
+    .menu {
+      text-align: right;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 0.75rem;
+      padding-top: 0.3rem;
+      transition: background $animation-speed, color $animation-speed ease-in-out;
+
+      &:hover {
+        background: $colour-accent;
+        color: #212121;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+button {
+  @include ui-border;
+  vertical-align: top;
+  background: none;
+  padding: calc(0.3rem + 2px) calc(0.8rem + 2px) calc(0.4rem + 2px) calc(0.8rem + 2px);
+  color: $colour-primary;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border $animation-speed, transform $animation-speed ease-in-out;
+
+  &::after {
+    @include ui-background;
+    transition: top $animation-speed, right $animation-speed, bottom $animation-speed, left $animation-speed, opacity $animation-speed ease-in-out;
+  }
+
+  &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+  }
+
+  &:active {
+    border: 2px solid $colour-border;
+    transform: scale(0.95);
+
+    &::after {
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+    }
+  }
+
+  &.secondary {
+    &::after {
+      opacity: 0;
+      top: 50%;
+      right: 50%;
+      bottom: 50%;
+      left: 50%;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  &.positive {
+    &::after {
+      background: rgba(106, 199, 31, 0.55);
+    }
+  }
+
+  &.negative {
+    &::after {
+      background: rgba(255, 60, 60, 0.55);
+    }
+  }
+}

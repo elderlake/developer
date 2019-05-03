@@ -1,6 +1,6 @@
 button {
   @include ui-border;
-  vertical-align: top;
+  vertical-align: middle;
   background: none;
   padding: calc(0.3rem + 2px) calc(0.8rem + 2px) calc(0.4rem + 2px) calc(0.8rem + 2px);
   color: $colour-primary;
@@ -11,7 +11,7 @@ button {
   outline: none;
   transition: border $animation-speed, transform $animation-speed ease-in-out;
 
-  &::after {
+  &::before {
     @include ui-background;
     transition: top $animation-speed, right $animation-speed, bottom $animation-speed, left $animation-speed, opacity $animation-speed ease-in-out;
   }
@@ -24,7 +24,7 @@ button {
     border: 2px solid $colour-border;
     transform: scale(0.95);
 
-    &::after {
+    &::before {
       top: 1px;
       right: 1px;
       bottom: 1px;
@@ -33,7 +33,7 @@ button {
   }
 
   &.secondary {
-    &::after {
+    &::before {
       opacity: 0;
       top: 50%;
       right: 50%;
@@ -42,7 +42,7 @@ button {
     }
 
     &:hover {
-      &::after {
+      &::before {
         opacity: 1;
         top: 2px;
         right: 2px;
@@ -52,14 +52,27 @@ button {
     }
   }
 
+  &.light {
+    border: 2px solid $colour-border-light;
+    color: #212121;
+
+    &::before {
+      background: $colour-border-light;
+    }
+
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.35);
+    }
+  }
+
   &.positive {
-    &::after {
+    &::before {
       background: rgba(106, 199, 31, 0.55);
     }
   }
 
   &.negative {
-    &::after {
+    &::before {
       background: rgba(255, 60, 60, 0.55);
     }
   }

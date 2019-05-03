@@ -1,0 +1,48 @@
+.masthead {
+  position: relative;
+  background: radial-gradient(circle at 50% 300%, #F3904F, #3B4371);
+  font-family: $font-primary;
+  padding: 1.5rem 0;
+  padding-top: 8.25rem;
+  padding-bottom: 7.6rem;
+
+  .content {
+    margin: 0 5.2%;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+    margin-top: 0.8rem;
+    letter-spacing: 0.05rem;
+  }
+
+  h2 {
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.05rem;
+  }
+
+  h3 {
+    margin-top: 0.8rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+  }
+
+  .banner {
+    background: $colour-accent;
+    width: 100%;
+    padding: 0.8rem 0;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    color: #212121;
+
+    span {
+      font-size: 0.85rem;
+      letter-spacing: 0.05rem;
+    }
+
+    button {
+      margin-left: 0.8rem;
+    }
+  }
+}

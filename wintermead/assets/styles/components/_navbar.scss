@@ -1,0 +1,22 @@
+nav {
+  padding: 1rem 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: background $animation-speed ease-in-out;
+
+  a {
+    color: $colour-primary;
+  }
+
+  h1 {
+    font-size: 0.84rem;
+    letter-spacing: 0.05rem;
+  }
+
+  &.scrolled {
+    background: #3B4371;
+  }
+}

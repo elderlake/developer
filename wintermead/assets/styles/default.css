@@ -432,11 +432,21 @@ nav {
   transition: background 0.12s ease-in-out;
 }
 
+nav img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0.4rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 nav a {
   color: #eeeeee;
 }
 
 nav h1 {
+  display: inline-block;
+  vertical-align: top;
   font-size: 0.84rem;
   letter-spacing: 0.05rem;
 }

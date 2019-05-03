@@ -7,11 +7,20 @@ nav {
   z-index: 10;
   transition: background $animation-speed ease-in-out;
 
+  img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.4rem;
+    filter: invert(100%);
+  }
+
   a {
     color: $colour-primary;
   }
 
   h1 {
+    display: inline-block;
+    vertical-align: top;
     font-size: 0.84rem;
     letter-spacing: 0.05rem;
   }

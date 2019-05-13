@@ -9,6 +9,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 a {
+  color: initial;
   text-decoration: none;
 }
 
@@ -265,6 +266,8 @@ pre.prettyprint.prettyprinted {
   border: 2px solid rgba(255, 255, 255, 0.1);
   padding: calc(0.4rem + 2px);
   border-radius: 0.3rem;
+  -webkit-transition: border 120ms ease-in-out;
+  transition: border 120ms ease-in-out;
 }
 
 pre.prettyprint.prettyprinted::after {
@@ -278,6 +281,10 @@ pre.prettyprint.prettyprinted::after {
   border-radius: 0.2rem;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+pre.prettyprint.prettyprinted:hover {
+  border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
 button {

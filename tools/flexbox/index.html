@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+    <title>Flexbox</title>
+
+    <link rel='stylesheet' href='./assets/styles/prettify.css'>
+    <link rel='stylesheet' href='../wintermead/assets/styles/default.css'>
+    <link rel='stylesheet' href='./assets/styles/default.css'>
+  </head>
+
+  <body onload='PR.prettyPrint()'>
+    <nav id='nav'>
+      <img src='./assets/images/elderlake.svg' alt='' height='16px;'>
+      
+      <a href='../'>
+        <h1>Elderlake Developers</h1>
+      </a>
+    </nav>
+
+    <div class='grid'>
+      <div class='sidebar'>
+        <h2>💪 Flexbox Editor</h2>
+    
+        <p>If you are unsure whether your browser supports flexbox, you can <a href='https://caniuse.com/#feat=flexbox'>check for compatibility</a>.</p>
+    
+        <label for='items'>Items:</label>
+        <div class='border'>
+          <input type='number' name='items' id='items' value='1'>
+        </div>
+    
+        <label for='direction'>Flex Direction:</label>
+        <div class='border'>
+          <select name='direction' id='direction'>
+            <option value=''>Row (default)</option>
+            <option value='row-reverse'>Row Reverse</option>
+            <option value='column'>Column</option>
+            <option value='column-reverse'>Column Reverse</option>
+          </select>
+        </div>
+    
+        <label for='wrap'>Wrap:</label>
+        <div class='border'>
+          <select name='wrap' id='wrap'>
+            <option value=''>No Wrap (default)</option>
+            <option value='wrap'>Forwards Wrap</option>
+            <option value='wrap-reverse'>Reverse Wrap</option>
+          </select>
+        </div>
+    
+        <label for='justify'>Justify Content:</label>
+        <div class='border'>
+          <select name='justify' id='justify'>
+            <option value=''>Flex Start (default)</option>
+            <option value='flex-end'>Flex End</option>
+            <option value='center'>Center</option>
+            <option value='space-around'>Space Around</option>
+            <option value='space-between'>Space Between</option>
+          </select>
+        </div>
+    
+        <label for='align'>Align Items:</label>
+        <div class='border'>
+          <select name='align' id='align'>
+            <option value=''>Stretch (default)</option>
+            <option value='flex-start'>Flex Start</option>
+            <option value='flex-end'>Flex End</option>
+            <option value='center'>Center</option>
+            <option value='baseline'>Baseline</option>
+          </select>
+        </div>
+
+        <pre class='prettyprint' id='output'>display: flex;</pre>
+    
+        <button id='copy'>Copy CSS</button>
+      </div>
+
+      <div id='content' class='content' style='display: flex;'>
+        <div class='element'>1</div>
+      </div>
+    </div>
+    
+    <script src='./assets/scripts/prettify.js'></script>
+    <script src='./assets/scripts/main.js'></script>
+  </body>
+</html>

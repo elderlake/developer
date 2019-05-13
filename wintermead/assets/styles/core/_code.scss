@@ -35,10 +35,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 
 pre.prettyprint.prettyprinted {
   @include ui-border;
+  transition: border 120ms ease-in-out;
 
   &::after {
     @include ui-background;
     background: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.35)
   }
 }

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700|Luckiest+Guy');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body, h2, p {
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+body {
+  background: #243b55;
+  color: #eeeeee;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 0.85rem;
+  padding-top: 3.09rem;
+}
+
+nav {
+  background: #3B4371;
+
+  a {
+    background: none;
+    padding: 0;
+    color: #eeeeee;
+  }
+}
+
+body, button, input, select, textarea {
+  letter-spacing: 0.1rem;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+a {
+  color: #212121;
+  font-weight: 700;
+  text-decoration: none;
+  background: #f09819;
+  padding: 0.1rem 0.2rem;
+}
+
+input {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  outline: none;
+  color: #eeeeee;
+}
+
+select {
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem;
+  color: #eeeeee;
+  border-radius: 0.2rem;
+  outline: none;
+
+  option {
+    background-color: #243b55;
+  }
+}
+
+textarea {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.15);
+  color: #eeeeee;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  height: 106px;
+  outline: none;
+  resize: none;
+}
+
+button {
+  font-weight: 400;
+
+  &::before {
+    transition: background 120ms ease-in-out;
+  }
+
+  &.success {
+    &::before {
+      background: rgba(133, 201, 55, 0.55);
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.15);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+
+  .sidebar {
+    padding: 1.2rem;
+    overflow-y: scroll;
+
+    input, label, textarea, button, select {
+      display: block;
+      width: 100%;
+    }
+
+    label, .border, #output, button {
+      margin-top: 0.8rem;
+    }
+
+    h2, p {
+      margin-top: 0.4rem;
+    }
+
+    label {
+      & + .border {
+        margin-top: 0.4rem;
+      }
+    }
+
+    .border {
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.3rem;
+      padding: 2px;
+      transition: border 120ms ease-in-out;
+    
+      &:hover {
+        border: 2px solid rgba(255, 255, 255, 0.35);
+      }
+    }
+  }
+
+  .content {
+    padding: 1.2rem;
+    overflow: scroll;
+
+    .element {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f09819;
+      color: rgba(0, 0, 0, 0.35);
+      font-size: 2.4rem;
+      width: 128px;
+      height: 128px;
+      margin: 1rem 0.5rem;
+    }
+  }
+}
+
+pre.prettyprint {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+pre .pun { color: #fff }      // Punctuation
+pre .pln { color: #f09819; }  // Plaintext
